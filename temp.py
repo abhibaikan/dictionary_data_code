@@ -5,7 +5,11 @@ data=json.load(open('data.json'))
 i='y'
 
 def loc(word):
-    return data[word]
+    word = word.lower()
+    if word in data:
+      return data[word]
+    else:
+        return "no word found or the word is incorrectw"
 
 while i == 'y':
     
@@ -13,10 +17,10 @@ while i == 'y':
     print(loc(word))
     
     i = input('do you wish to cont. y/n: ')
-    
+
     if i=='y':
-        continue
+     continue
     elif i=='n':
-        break
+      break
 
         
